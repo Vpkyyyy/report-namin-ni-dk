@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Project report</title>
+        <style> 
+            body {
+                background-color: #f3f4f6;
+                background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
+                background-size: 24px 24px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                padding: 40px 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                box-sizing: border-box;
+                overflow: hidden;
+            }
+            .report-box   {
+                background-color: #ffffff;
+                max-width: 950px;
+                width: 100%;
+                height: 80vh;
+                padding: 40px;
+                border-radius: 12px;
+                border-top: 6px solid #2563eb;
+                box-shadow: 0 10px 30px rgba(15,23,42,0.08);
+                box-sizing: border-box;
+                margin-bottom: 100px;
+
+                overflow-y: scroll;
+                overflow-x: hidden;
+                position: relative;
+            }
+            .report-title {
+                text-align: center;
+                font-size: 2.4em;
+                color: #111111;
+                margin-top: 0;
+                margin-bottom: 35px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-weight: 800;
+            }
+            .split-row {
+                display: flex;
+                gap: 50px;
+                margin-bottom: 30px;
+                align-items: flex-start;
+
+            }
+            .left-text-column {
+                flex: 1.2;
+                font-size: 1.15em;
+                line-height: 1.8;
+                columns: #334155;
+                text-align: left;
+            }
+            .right-image-column {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .report-image {
+                max-height: 250px;
+                max-width: 250%;
+                object-fit: cover;
+                border: 2px solid #959090;
+                border-radius: 8px;
+                cursor: pointer;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+                transition: transform 0.2s, box-shadow 0.2s;
+            }
+            .report-image-hover {
+                transform: scale(1.02);
+            }
+            .image-caption {
+                font-size: 0.85em;
+                color: #3b4450;
+                font-size: italic;
+                margin-top: 10px;
+                text-align: center;
+                width: 100%;
+                max-width: 380px;
+            }
+            .extended-body-text {
+                font-size: 1.1em;
+                line-height: 1.8;
+                color: #2c3e50;
+                margin-top: 20px;
+
+            }
+            .bottom-nav {
+                border-top: 1px solid #e2e8f0;
+                margin-top: 60px;
+                padding-top: 30px;
+                text-align: right;
+            }
+            .quiz-outer-container {
+                position: fixed;
+                bottom: 25px;
+                right: 25px;
+                background-color: #ffffff;
+                padding: 10px;
+                border-radius: 8px;
+                border: 1px solid #cbd5e1;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+                z-index: 999999;
+                display: none;
+                animation: popInBtn 0.3s ease-out forwards;
+            }
+            .quiz-btn {
+                background-color: #2563eb;
+                color: #ffffff;
+                border: none;
+                padding: 10px 20px;
+                font-size: 0.9em;
+                font-weight: bold;
+                border-radius: 4px;
+                cursor: pointer;
+                text-decoration: none;
+                display: inline-block;
+            }
+            .quiz-btn:hover {
+                background-color: #0f172a;
+            }
+            .lightbox {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.85);
+                display: none;
+                justify-content: center;
+                align-items: center;
+                z-index: 999999;
+            }
+            .ligntbox-img {
+                max-width: 85%;
+                max-height: 85%;
+                box-shadow: 0 0 20px rgba(0,0,0,0.4);
+            }
+            @keyframes popInBtn {
+                from { opacity: 0; transform: scale(0.9) translateY(5px); }
+                to { opacity: 1; transform: scale(1) translateY(0); }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="report-box" id="scrollable-report-box"> 
+            <h1 class="report-title">Web 2.0</h1>
+
+            <div class="split-row">
+                <div class="left-text-column">
+                    <p style="margin-top: 0;">
+                        helloejfkehgieiu iweiughiewugiuewiewukgew
+                        gkwehgieruigkvwbriguiwhtuhw4igtuwbugsiutver
+                        selkhiesrhgiojeihguuhgsgkhaskhgluawoigwuty 4ytiuwiu iriuuuuuuuuuewriweyiru  wyeiugweyrg wgrigwiuehiuawkhfwahh iorigwueygr7w iwegoygwhgilshg78owgy iuytoygawhgbiawg7otwaueg
+                        lj kwgiuowiguiwg 8ywiutiuwy ogw
+                    </p>
+                    <p>
+                        lgkfyrdt uif ytfuyttyyt ti fyti  ft itfiytf ytfutfy
+                    </p>
+                </div>
+
+                <div class="right-image-column">
+                    <img src="https://www.techtarget.com/rms/onlineImages/ICT_components.jpg" class="report-image" onclick="openFullImage(this.src)" alt="Project Graphic Visual">
+                    <div class="image-caption">figure 1.1 - blahblhs</div>
+                </div>
+            </div>
+
+            <div class="extended-body-text">
+
+                <p style="font-weight: bold; font-size: 1.2em; color: #0f172a; margin-top: 40px;"> section 2 krhgiugifyf</p>
+                <p>
+                    this text is nhalbhkajibhjoahiguvufcfchgcghxfhxgdxgxhddxhhdxhdxhdxhxddxhxdfhfdh
+                </p>
+
+                <div style="display: flex; flex-direction: column; align-items: center; margin: 30px 0;">
+                    <img src="https://www.techtarget.com/rms/onlineImages/ICT_components.jpg" class="report-image" onclick="openFullImage(this.src)" alt="secondary tddcfplc">
+                    <div class="image-caption">figure 1.2 ekhg</div>
+                </div>
+                <p>
+                    blahdkjegfieui iugifugeiuf iegwfiu weigfiwegfyugwefewigweygiywegiyfgequ fgkegwuyfiuutf i uyfiu uif yt y tf iu fuifuy iu ity iu fiuf it iuf 
+                </p>
+
+            </div>
+
+            <div id="quiz-outer-box" class="quiz-outer-container">
+                <button class="quiz-btn" onclick="startQuiz()">Quiz section</button>
+            </div>
+        </div>
+
+        <div id="lightbox-window" class="lightbox" onclick="closeFullImage()">
+            <img id="lightbox-img" src="" alt="Expanded projection">
+
+        <script>
+            function openFullImage(sourcepath) {
+                document.getElementById("lightbox-img").src = sourcepath;
+                document.getElementById("lightbox-window").style.display = "flex";
+            }
+            function closeFullImage() {
+                document.getElementById("lightbox-window").style.display = "none";
+            }
+            const reportBox = document.getElementById("scrollable-report-box");
+            const quizBox = document.getElementById("quiz-outer-box");  
+            
+            reportBox.onscroll = function() {
+                if (reportBox.scrollTop + reportBox.clientHeight >= reportBox.scrollHeight - 5) {
+                   quizBox.style.display = "block";
+                } else {
+                    quizBox.style.display = "none";
+                }
+            };
+            function startQuiz() {
+                window.location.replace("quiz.html");
+            }
+        </script>
+    </body>
+</html>
