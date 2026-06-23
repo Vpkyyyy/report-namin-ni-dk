@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Project report</title>
+        <style> 
+            body {
+                background-color: #f3f4f6;
+                background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
+                background-size: 24px 24px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                padding: 40px 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                box-sizing: border-box;
+                overflow: hidden;
+            }
+            .report-box   {
+                background-color: #ffffff;
+                max-width: 950px;
+                width: 100%;
+                height: 80vh;
+                padding: 40px;
+                border-radius: 12px;
+                border-top: 6px solid #2563eb;
+                box-shadow: 0 10px 30px rgba(15,23,42,0.08);
+                box-sizing: border-box;
+                margin-bottom: 100px;
+
+                overflow-y: scroll;
+                overflow-x: hidden;
+                position: relative;
+            }
+            .report-title {
+                text-align: center;
+                font-size: 2.4em;
+                color: #111111;
+                margin-top: 0;
+                margin-bottom: 35px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-weight: 800;
+            }
+            .split-row {
+                display: flex;
+                gap: 50px;
+                margin-bottom: 30px;
+                align-items: flex-start;
+                flex-wrap: wrap;
+
+            }
+            .left-text-column {
+                flex: 1.2;
+                font-size: 1.15em;
+                line-height: 1.8;
+                columns: #334155;
+                text-align: justify;
+                word-break: break-word;
+                overflow-wrap: break-word;
+            }
+            .right-image-column {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .report-image {
+                max-height: 250px;
+                max-width: 250%;
+                object-fit: cover;
+                border: 2px solid #959090;
+                border-radius: 8px;
+                cursor: pointer;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+                transition: transform 0.2s, box-shadow 0.2s;
+            }
+            .report-image-hover {
+                transform: scale(1.02);
+            }
+            .image-caption {
+                font-size: 0.85em;
+                color: #3b4450;
+                font-size: italic;
+                margin-top: 10px;
+                text-align: center;
+                width: 100%;
+                max-width: 380px;
+            }
+            .extended-body-text {
+                font-size: 1.1em;
+                line-height: 1.8;
+                color: #2c3e50;
+                margin-top: 20px;
+
+            }
+            .bottom-nav {
+                border-top: 1px solid #e2e8f0;
+                margin-top: 60px;
+                padding-top: 30px;
+                text-align: right;
+            }
+            .quiz-outer-container {
+                position: fixed;
+                bottom: 25px;
+                right: 25px;
+                background-color: #ffffff;
+                padding: 10px;
+                border-radius: 8px;
+                border: 1px solid #cbd5e1;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+                z-index: 999999;
+                display: none;
+                animation: popInBtn 0.3s ease-out forwards;
+            }
+            .quiz-btn {
+                background-color: #2563eb;
+                color: #ffffff;
+                border: none;
+                padding: 10px 20px;
+                font-size: 0.9em;
+                font-weight: bold;
+                border-radius: 4px;
+                cursor: pointer;
+                text-decoration: none;
+                display: inline-block;
+            }
+            .quiz-btn:hover {
+                background-color: #0f172a;
+            }
+            .lightbox {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.85);
+                display: none;
+                justify-content: center;
+                align-items: center;
+                z-index: 999999;
+            }
+            .ligntbox-img {
+                max-width: 85%;
+                max-height: 85%;
+                box-shadow: 0 0 20px rgba(0,0,0,0.4);
+            }
+            @keyframes popInBtn {
+                from { opacity: 0; transform: scale(0.9) translateY(5px); }
+                to { opacity: 1; transform: scale(1) translateY(0); }
+            }
+            @media (max-width: 768px) {
+                .left-text-column, .right-image-column {
+                    flex: 1 1 100%;
+                    max-width: 100%;
+                }
+                .right-image-column {
+                    align-items: center;
+                    margin-top: 20px;
+                }
+                .report-image {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="report-box" id="scrollable-report-box"> 
+            <h1 class="report-title">Web 2.0</h1>
+
+            <div class="split-row">
+                <div class="left-text-column">
+                    <p style="margin-top: 0;">
+                        The transition between the end of Web 1.0 and the beginning of Web 2.0 cannot be exactly determined, 
+                        since the change was gradual as internet technology became more and more interactive. 
+                        The term Web 2.0 was first used around the year 2004 to differentiate the current internet technology from the past technology.
+                    </p>
+                    <p>
+                        Web 2.0 is the beginning of the widespread use and popularity of social media such as Twitter (now X), Facebook, and YouTube.  
+                        Users can now interact, contribute, and create their own internet space and content, resulting in an explosion of information available to everyone on the internet. 
+                        The internet became a place where people could communicate, collaborate, and share ideas with others around the world.
+                    </p>
+                    <p>
+                        Web 2.0 is also known as the "read-write web" because users are no longer limited to reading information. 
+                        They can also write blogs, upload videos, post pictures, leave comments, react to posts, and participate in online discussions. 
+                        This level of interaction makes websites more useful and engaging for everyone.
+                    </p>
+                </div>
+
+                <div class="right-image-column">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStmRKjgxKxX75rPWqsxo2wZg98UUQPFGook1x-UK3aWA&s=10" class="report-image" onclick="openFullImage(this.src)" alt="Project Graphic Visual">
+                    <div class="image-caption">figure 1.1 - Web 2.0 infographic</div>
+                </div>
+            </div>
+
+            <div class="extended-body-text">
+
+                <p style="font-weight: bold; font-size: 1.2em; color: #0f172a; margin-top: 40px;"> ----------------------------------------------------------------------------------------------------</p>
+                <p>
+                    In Web 2.0, web pages are now written using web programming languages such as PHP, Python, Ruby, and Perl. 
+                    These dynamic programming languages allow websites to respond to users' actions and display updated content instantly. 
+                    It is now easy to share photos, videos, stories, and opinions through the web.
+                </p>
+
+                <div style="display: flex; flex-direction: column; align-items: center; margin: 30px 0;">
+                    <img src="data:image/jpeg;base64,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" class="report-image" onclick="openFullImage(this.src)" alt="secondary tddcfplc">
+                    <div class="image-caption">figure 1.2 Web 2.0 websites</div>
+                </div>
+                <p>
+                    Popular examples of Web 2.0 websites include Wikipedia, where users can contribute and edit articles; YouTube, where people upload and watch videos; Flickr, where users share photographs; 
+                    and social networking platforms such as Facebook, Instagram, and TikTok, where people communicate and share content.
+                </p>
+                <p style="font-weight: bold; font-size: 1em; color: #0f172a; margin-top: 40px;">  Advantages of Web 2.0</p>
+                <p>
+                - Encourages communication and collaboration.<br>
+                - Allows users to create and share content easily.<br>
+                - Makes information available quickly.<br>
+                - Supports online learning, business, and entertainment.<br>
+                - Helps connect people from different parts of the world.<br>
+            </p>
+                <p style="font-weight: bold; font-size: 1em; color: #0f172a; margin-top: 40px;">  Disadvantages of Web 2.0</p>
+                <p>
+                - Fake news and misinformation can spread quickly.<br>
+                - Privacy and security risks.<br>
+                - Cyberbullying and online harassment.<br>
+                - Internet addiction and excessive screen time.<br>
+                </p>
+
+            </div>
+
+            <div id="quiz-outer-box" class="quiz-outer-container">
+                <button class="quiz-btn" onclick="startQuiz()">Quiz section</button>
+            </div>
+        </div>
+
+        <div id="lightbox-window" class="lightbox" onclick="closeFullImage()">
+            <img id="lightbox-img" src="" alt="Expanded projection">
+
+        <script>
+            function openFullImage(sourcepath) {
+                document.getElementById("lightbox-img").src = sourcepath;
+                document.getElementById("lightbox-window").style.display = "flex";
+            }
+            function closeFullImage() {
+                document.getElementById("lightbox-window").style.display = "none";
+            }
+            const reportBox = document.getElementById("scrollable-report-box");
+            const quizBox = document.getElementById("quiz-outer-box");  
+            
+            reportBox.onscroll = function() {
+                if (reportBox.scrollTop + reportBox.clientHeight >= reportBox.scrollHeight - 120) {
+                   quizBox.style.display = "block";
+                } else {
+                    quizBox.style.display = "none";
+                }
+            };
+            function startQuiz() {
+                window.location.replace("quiz.html");
+            }
+        </script>
+    </body>
+</html>
